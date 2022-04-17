@@ -1,0 +1,16 @@
+{
+  "LC08_L2SP_176039_20220217_02_T1": {
+  "datetime": "01.02.2021",
+  "platform": "Sentinel-2",
+  "area_coverage": 100,
+  "cloud_coverage": 100,
+  "off-nadir-angle": 0
+  },
+  "LC08_L2SP_176039_20220201_02_T1": {
+  "datetime": "01.02.2022",
+  "platform": "Sentinel-2",
+  "area_coverage": 90,
+  "cloud_coverage": 25,
+  "off-nadir-angle": 56
+  }
+}
