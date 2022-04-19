@@ -2,7 +2,7 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
-import { MapContainer, TileLayer, FeatureGroup } from 'react-leaflet'
+import { Map, TileLayer, FeatureGroup } from 'react-leaflet'
 import { useState} from 'react';
 import LocationSearch from './Components/locationSearch';
 import { detailsHandellerContext } from './contexts/detailsHandellerContext';
@@ -46,7 +46,7 @@ function App() {
       <div className='h-screen bg-slate-700 grid grid-rows-1 grid-flow-col'>  
         {/* map container */}
         <div className=' col-span-4'>
-        <MapContainer center={[51.505, -0.09]} zoom={13}>
+        <Map center={[51.505, -0.09]} zoom={13}>
           <FeatureGroup>
             {showControls && (
               <EditControl 
@@ -69,7 +69,7 @@ function App() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-        </MapContainer>
+        </Map>
         </div>
         {/* sidebar */}
         <div className='col-span-1 grid grid-rows-6 grid-flow-col' style={{
@@ -88,7 +88,7 @@ function App() {
             backgroundColor: "#1f1f1f"
           }}>
             {selectedLocation && (
-              <div className="mt-1.5 text-xs p-4">
+              <div className="mt-1.5 text-xs p-4" data-testid='selected-location'>
                 <span className="text-white font-light flex-1 block break-words"
                   style={{
                     width: "200px"

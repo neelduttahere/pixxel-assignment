@@ -29,6 +29,7 @@ function LocationSearch(props:any){
       backgroundColor: "#1f1f1f"
     }}>
       <input
+        data-testid='search-box'
         type="text"
         name="location-search"
         placeholder='search for location...'
@@ -45,6 +46,7 @@ function LocationSearch(props:any){
             position: "absolute",
             marginTop: "8px"
           }}
+          data-testid='search-suggestions'
         >
           {searchSuggestions.map((feature:any)=>{
             return(
